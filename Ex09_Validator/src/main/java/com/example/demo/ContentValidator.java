@@ -13,7 +13,7 @@ public class ContentValidator implements Validator{
 	public void validate(Object obj, Errors errors) {
 		ContentDTO dto = (ContentDTO)obj;
 		
-		String sWriter = dto.getWrtier();
+		String sWriter = dto.getWriter();
 		if(sWriter == null || sWriter.trim().isEmpty()) {
 			System.err.println("Writer is null or empty");
 			errors.rejectValue("writer", "trouble");
